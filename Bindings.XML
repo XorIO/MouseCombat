@@ -1,0 +1,14 @@
+<Bindings>
+	<Binding name="MC_MouseLook_mode_toggle" description="Toggle MouseLook Lock mode" header="MouseCombat">
+		MC_Toggle()
+	</Binding>
+	<Binding name="MC_MouseLook_mode_release" description="Will temporary release MouseLook Lock mode while pressing this button" header="MouseCombat" runOnUp="true">
+	if MouseLookOn then
+		if ( keystate == "down" ) then
+			MouselookStop();
+		else
+		  	MouselookStart();
+		end
+	end
+	</Binding>
+</Bindings>

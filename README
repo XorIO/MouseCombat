@@ -1,0 +1,70 @@
+Mouse Combat by Xor 2005-2010
+
+    Version 1.4.0RC1
+
+    0. About
+    1. ChangeLog
+    2. Features
+    3. Notes/How-to
+    4. TODO
+    5. History
+
+    About:
+    This addon allows you to toggle into mouse look mode. 
+    This free first and second mouse buttons we can assign together with ctrl, shift and alt modifiers.
+    Moving your mouse will rotate your character.
+    Together with first and second mouse buttons it allows you to keep character specific bindings in one place.
+    Same time it supports dual-spec bindings, by switching spec it will reassign spec specific actions on the fly.
+    To toggle I personally use CTRL-SPACE, my friend use additional small button on his logitech mouse.
+    You may notice Left and Right buttons bindings in the config - it is back and forward button on my VX revolution mouse
+    reassigned to left/right in the logitech SetPoint utility.    
+
+    ChangeLog:
+    1.4.0RC1: Fixed patch 4.0.1 issues.
+    1.3.0SP1: Fixed override bindings problem.
+    1.3.0GA: First public release. Dual-spec specific bindings added. All bindings moved into config.lua.
+    1.2PVT: Private Release. Implemented mouse lock toggle code. Removed dependency from patched Mouse_Look_Lock. Thank you Trimble Epic.
+    1.1PVT: Private Release. Class specific configurations added.
+    1.0PVT: WOTLK Private Release. Well, actually there was first release for WOW vanilla for me and my friend only, 
+			then TBC release for me only and then WotLK release for me and my friend =)
+    xxPVT: TBC Private Release.
+    xxPVT: WOW Vanilla Private release.
+
+    Features:
+	1. Mouse look toggle binding. (My personal favorite is CTRL-SPACE)
+	2. Default class independent bindings. (I use only focus macro)
+	3. Class specific bindings (all in one place)
+	4. Mouse Look mode bindings (Quake style) e.g. Button1 cast spell, Button2, CTRL-Button1 ... 
+		(With CTRL, ALT and SHIFT) it gives you 8 combinations you can not use without this mode.
+	5. Dual-spec override posibility, e.g. Mouse button 1 in combat spec casts Sinister Strike, in assasination casts Mutilate.
+
+    Notes/How-to:
+	Assign mouse look toggle binding in the standard blizzard UI. (My personal favorite is CTRL-SPACE)
+	In order to make changes or add classes/spec edit config.lua
+
+    TODO:
+    1. Config UI
+	2. Probably split configs per class/spec in order to allow users to simply add new configs.
+
+    History:
+    I always was a gamer from the digger/tetris/packman times. Played a lot of FPS games and starting from WOW beta I missed mouse look combat.
+    When I start to play vanilla WOW I found addon kikiutils by kiki, but because it contained a lot of unnecessary code/features (for me).
+	I created my own Mouse Look addon. The binding code was pain that days.
+    I only shared addon with my guild (Molotoff Coctail, EU-Sylvanos).
+    After guild was disbanded I stopped played for a while.
+
+    In the spring 2008 I returned to the game for a few months and first what I did is fixed my addon. The code was simplified a lot.
+    Also I added new kiki utils as dependency, but changed few lines in it in order to disable kikiutils mouse buttons binding.
+
+    In the spring 2009 I returned again and changed kiki utils dependency to the Mouse_Look_Lock, again commenting buttons binding in it.
+
+	09/12/2009: Decided to publish this addon.
+		Two functions copied from Mouse_Look_Lock as well as bindings.xml in order to keep the code in single place and stop patching 3rd party addon.
+		Let's check after patch 3.3.0 and if it works I'll upload addon to the databases.
+	09/14/2009: Added dual-spec override posibility.
+		Time to test and publish. If users will find this addon useful I will think about configuration UI.
+
+	Thanks and credits:
+	Kiki - for the initial vanilla mouse look toggle code.
+	Trimble Epic - for the great and simple addon I used as mouse look toggle (by commenting out button1 and button2 binding).
+					And for the code for the simple toggle mouse look in past vanilla patches.
